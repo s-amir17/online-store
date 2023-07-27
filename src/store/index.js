@@ -38,6 +38,14 @@ export default createStore({
       GET_CATEGORIES(state, categories) {
          state.categories = categories;
       },
+
+      SORTED_PRODUCTS(state, selected) {
+         if (selected == 'low') {
+            state.products.sort((a, b) => a.price - b.price);
+         } else if (selected == 'high') {
+            state.products.sort((a, b) => b.price - a.price);
+         }
+      },
    },
 
    actions: {
@@ -83,6 +91,7 @@ export default createStore({
             console.error(error);
          }
       },
+
       async getProductsCategory({ commit }, category) {
          try {
             const response = await axios.get('https://fakestoreapi.com/products/category/' + category);
@@ -91,6 +100,10 @@ export default createStore({
          } catch (error) {
             console.error(error);
          }
+      },
+
+      sortedProducts({ commit }, selected) {
+         commit('SORTED_PRODUCTS', selected);
       },
    },
 });

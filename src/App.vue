@@ -20,6 +20,6 @@ export default {
 
 #app {
    font-family: Helvetica, Arial, sans-serif;
-   padding-top: 45px;
+   padding-top: 60px;
 }
 </style>

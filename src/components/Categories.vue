@@ -28,16 +28,19 @@ export default {
          getProducts: 'getProducts',
          getCategories: 'getCategories',
          getProductsCategory: 'getProductsCategory',
+         // sortedProducts: 'sortedProducts',
       }),
 
       getAll() {
          this.isActive = ' ';
          this.getProducts();
+         // this.sortedProducts();
       },
 
       getWithCategory(category) {
          this.isActive = category;
          this.getProductsCategory(category);
+         // this.sortedProducts();
       },
 
       toUpper(str) {
@@ -55,17 +58,7 @@ export default {
 
    mounted() {
       this.getCategories();
+      // this.sortedProducts();
    },
 };
 </script>
-
-<style lang="scss" scoped>
-.category-btns {
-   display: flex;
-   gap: 20px;
-   margin: 30px 0 10px;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-}
-</style>
