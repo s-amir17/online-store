@@ -43,8 +43,8 @@ export default {
 
 <style lang="scss" scoped>
 .product {
-   // margin: 0 auto;
-   // max-width: 400px;
+   margin: 0 auto;
+   max-width: 400px;
    border: 1px solid cadetblue;
    border-radius: 10px;
    text-align: center;

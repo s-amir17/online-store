@@ -1,13 +1,14 @@
 <template>
    <div class="container">
+      <input class="form-control" v-model="specificProduct" type="text" placeholder="Search product" />
+
       <div class="cnt">
          <Categories></Categories>
-
          <MySelect></MySelect>
       </div>
 
-      <div class="row my-5" style="gap: 20px">
-         <SingleProduct class="col" v-for="product in products" :key="product.id" :product="product"></SingleProduct>
+      <div class="row my-3" style="gap: 20px">
+         <SingleProduct class="col" v-for="product in searchedProduct" :key="product.id" :product="product"></SingleProduct>
       </div>
    </div>
 </template>
@@ -22,6 +23,12 @@ export default {
    name: 'Products',
    components: { SingleProduct, Categories, MySelect },
 
+   data() {
+      return {
+         specificProduct: '',
+      };
+   },
+
    methods: {
       ...mapActions({
          getProducts: 'getProducts',
@@ -32,6 +39,10 @@ export default {
       ...mapGetters({
          products: 'products',
       }),
+
+      searchedProduct() {
+         return this.products.filter(product => product.title.toLowerCase().includes(this.specificProduct.toLowerCase()));
+      },
    },
 
    mounted() {

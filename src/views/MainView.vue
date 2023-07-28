@@ -1,6 +1,10 @@
 <template>
    <div>
-      <h1>Landing figma website</h1>
+      <h1>
+         I would never fall in love again until I found her
+         <br />I said, "I would never fall unless it's you I fall into" <br />
+         I was lost within the darkness, but then I found her I found you
+      </h1>
    </div>
 </template>
 
@@ -14,5 +18,7 @@ export default {
 h1 {
    color: midnightblue;
    text-align: center;
+   margin: auto;
+   max-width: 500px;
 }
 </style>
