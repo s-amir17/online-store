@@ -7,7 +7,7 @@
       </div>
 
       <div class="product__body">
-         <h4 @click="$router.push(`/products/${product.id}`)">
+         <h4 @click="$router.push(`/${product.id}`)">
             {{ product.title }}
             <!-- <router-link :to="{ name: 'OneProductView', params: { id: product.id } }">{{ product.title }}</router-link>\ -->
          </h4>

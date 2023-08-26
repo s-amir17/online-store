@@ -1,10 +1,6 @@
 <template>
    <div>
-      <h1>
-         I would never fall in love again until I found her
-         <br />I said, "I would never fall unless it's you I fall into" <br />
-         I was lost within the darkness, but then I found her I found you
-      </h1>
+      <h1>Need a landing page</h1>
    </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
    <nav class="navbar navbar-expand-sm bg-body-tertiary border-bottom fixed-top nav" data-bs-theme="dark">
       <div class="container-fluid">
-         <router-link to="/" class="navbar-brand">LOGO</router-link>
+         <a class="navbar-brand" href="https://www.codewars.com/users/Amigo17" target="_blank">LOGO</a>
          <button
             class="navbar-toggler"
             type="button"
@@ -16,7 +16,7 @@
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                <li class="nav-item">
-                  <router-link class="nav-link link" aria-current="page" to="/products">Products</router-link>
+                  <router-link class="nav-link link" aria-current="page" to="/">Products</router-link>
                </li>
                <li class="nav-item">
                   <router-link class="nav-link link" to="/about">About</router-link>

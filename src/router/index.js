@@ -1,21 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import ProductsView from '../views/ProductsView.vue';
-import MainView from '../views/MainView.vue';
+// import MainView from '../views/MainView.vue';
 import OneProductView from '@/views/OneProductView';
 
 const routes = [
+   // {
+   //    path: '/',
+   //    name: 'MainView',
+   //    component: MainView,
+   // },
    {
       path: '/',
-      name: 'MainView',
-      component: MainView,
-   },
-   {
-      path: '/products',
       name: 'ProductsView',
       component: ProductsView,
    },
    {
-      path: '/products/:id',
+      path: '/:id',
       name: 'OneProductView',
       component: OneProductView,
    },

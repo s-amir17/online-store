@@ -1,6 +1,6 @@
 <template>
    <div class="container">
-      <input class="form-control" v-model="specificProduct" type="text" placeholder="Search product" />
+      <input class="form-control" v-model="specificProduct" ref="inp" type="text" placeholder="Search product" />
 
       <div class="cnt">
          <Categories></Categories>
@@ -47,6 +47,7 @@ export default {
 
    mounted() {
       this.getProducts();
+      this.$refs.inp.focus();
    },
 };
 </script>
